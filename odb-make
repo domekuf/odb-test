@@ -1,0 +1,4 @@
+odb -d sqlite --generate-schema --generate-query --profile boost event.hpp && \
+c++ -c event-odb.cxx && \
+c++ -c -g main.cpp && \
+c++ -o main main.o event-odb.o -lodb-sqlite -lodb
